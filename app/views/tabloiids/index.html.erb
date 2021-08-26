@@ -1,0 +1,15 @@
+<h1>タブローイードTOP</h1>
+
+<button>
+  <%= link_to "新規アップロード", new_path %>
+</button>
+
+<% @tabloiids.each do |t| %>
+  <div>
+    <%= link_to(t.file_path) do %>
+      <img src="<%= t.image_path %>" >
+    <% end %>
+    <p><%= t.file_name %></p>
+    <p>アップロード日: <%= t.date.strftime("%m月 %d日") %></p>
+  </div>
+<% end %>
