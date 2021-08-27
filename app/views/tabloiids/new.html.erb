@@ -1,13 +1,21 @@
 <h1>アップロード</h1>
 
 <%= form_with url: tabloiids_path, :html => { :id => 'upload' } do |f| %>
-  <h2>PDF</h2>
-  <%= f.file_field :pdf_file, accept:"application/pdf" %>
+  <div class="flex_upload-box">
+    <div class="flex_upload-item">
+      <h2>PDF</h2>
+      <%= f.file_field :pdf_file, accept:"application/pdf" %>
+    </div>
+    <div class="flex_upload-item">
+      <h2>サムネイル用画像</h2>
+      <%= f.file_field :image_file, accept:"image/jpeg,image/png" %>
+    </div>
+  </div>
 
-  <h2>サムネイル用画像</h2>
-  <%= f.file_field :image_file, accept:"image/jpeg,image/png" %>
-
-  <button type="submit">アップロード</button>
+  <div class="appload">
+    <button type="submit">アップロード</button>
+  </div>
+  
 <% end %>
 
 <a href="/">TOPに戻る</a>

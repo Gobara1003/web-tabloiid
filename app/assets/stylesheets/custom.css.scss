@@ -13,14 +13,6 @@ html {
   textarea {
     resize: vertical;
   }
-  
-  .center {
-    text-align: center;
-  }
-  
-  .center h1 {
-    margin-bottom: 10px;
-  }
 
   h1, h2, h3, h4, h5, h6 {
     line-height: 1;
@@ -32,12 +24,37 @@ html {
     margin-bottom: 30px;
     text-align: center;
   }
-  
-  h2 {
-    font-size: 1.7em;
-    letter-spacing: -1px;
-    margin-bottom: 30px;
-    text-align: left;
-    font-weight: normal;
-    color: #999;
-  }
+
+  .flex_tabloiid-box {
+    padding:  20px;             /* 余白指定 */
+    display: flex;              /* フレックスボックスにする */
+    align-items:stretch;        /* 縦の位置指定 */
+    justify-content:space-between;
+    flex-direction:row-reverse;         /* 要素の並び順 */
+    flex-wrap: wrap-reverse;            /* 折り返し指定 */
+    }
+
+    .flex_tabloiid-item {
+        background-color: #eee;     /* 背景色指定 */
+        padding: 10px;                /* 余白指定 */
+        margin:  100px;               /* 外側の余白 */
+    }
+    
+  .flex_upload-box {
+    padding:  20px;             /* 余白指定 */
+    display: flex;              /* フレックスボックスにする */
+    align-items:stretch;        /* 縦の位置指定 */
+    justify-content:space-around;
+    }
+
+    .flex_upload-item {
+      background-color: rgb(240, 119, 119);     /* 背景色指定 */
+        padding: 10px;              /* 余白指定 */
+        margin:  10px;              /* 外側の余白 */
+        text-align:  center;        /* 文字中央揃え */
+    }
+
+    .appload{
+        padding:  100px;             /* 余白指定 */
+        text-align:center;           /* 文字中央揃え */
+     }
